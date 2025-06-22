@@ -1,6 +1,7 @@
-package com.br.generator_token.controller;
+package com.br.generator_token.Domain.Controller;
 
-import com.br.generator_token.Service.TokenService;
+import com.br.generator_token.Domain.Service.TokenService;
+import com.br.generator_token.Domain.dto.DetalheToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,8 +20,6 @@ public class geradorController {
 
 		var response = tokenService.gerarToken();
 
-		return ResponseEntity.ok(response);
+		return ResponseEntity.ok(new DetalheToken(response));
 	}
-
-
 }

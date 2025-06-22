@@ -1,4 +1,4 @@
-package com.br.generator_token.Service;
+package com.br.generator_token.Domain.Service;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
